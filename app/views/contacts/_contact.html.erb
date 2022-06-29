@@ -11,7 +11,17 @@
 
   <p>
     <strong>Category:</strong>
-    <%= contact.category %>
+    <% if contact.category %>
+      <% if contact.category == 0 %>
+        <%= "Achieve" %>
+      <% elsif contact.category == 1 %>
+        <%= "テキスト" %>
+      <% elsif contact.category == 2 %>
+        <%= " 説明会" %>
+      <% elsif contact.category == 3 %>
+        <%= "その他" %>
+      <% end %>
+    <% end %>
   </p>
 
   <p>
