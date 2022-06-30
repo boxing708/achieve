@@ -15,6 +15,19 @@ class ContactsController < ApplicationController
     @contact = Contact.new
   end
 
+  def confirm
+    @contact = Contact.new(contact_params)
+    if @contact.invalid?
+      render :new
+    end
+  end
+
+  #入力内容を保持したまま前のページに戻る
+  def back
+    @contact = Contact.new(contact_params)
+    render :new
+  end
+
   # GET /contacts/1/edit
   def edit
   end
@@ -33,6 +46,10 @@ class ContactsController < ApplicationController
         format.json { render json: @contact.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  #送信完了画面
+  def done
   end
 
   # PATCH/PUT /contacts/1 or /contacts/1.json
