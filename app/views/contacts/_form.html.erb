@@ -22,14 +22,10 @@
   </div>
 
   <div>
-    <%= form.radio_button :category, '0' %>
-    <%= form.label :category, "Achieve", {value: 0, style: "display: inline-block;"} %>
-    <%= form.radio_button :category, '1' %>
-    <%= form.label :category, "テキスト", {value: 1, style: "display: inline-block;"} %>
-    <%= form.radio_button :category, '2' %>
-    <%= form.label :category, "説明会", {value: 2, style: "display: inline-block;"} %>
-    <%= form.radio_button :category, '3' %>
-    <%= form.label :category, "その他", {value: 3, style: "display: inline-block;"} %>
+    <%= form.radio_button :category, "Achieve" %>Achieve
+    <%= form.radio_button :category, "テキスト" %>テキスト
+    <%= form.radio_button :category, "説明会" %>説明会
+    <%= form.radio_button :category, "その他" %>その他
   </div>
 
   <div>
