@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :contacts
   #asオプションをつけると名前付きヘルパーとしてdone_pathとdone_urlが作成される
   post 'contacts/confirm', to: 'contacts#confirm', as: 'confirm'
