@@ -19,10 +19,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_29_051017) do
   end
 
   create_table "contacts", charset: "utf8mb4", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.text "content"
-    t.integer "category"
+    t.string "name", null: false
+    t.string "email", null: false
+    t.text "content", null: false
+    t.string "category", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
