@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+  root :to => "blogs#index"
   resources :contacts
   #asオプションをつけると名前付きヘルパーとしてdone_pathとdone_urlが作成される
   post 'contacts/confirm', to: 'contacts#confirm', as: 'confirm'
